@@ -8,6 +8,7 @@ class DealerBaseSchema(BaseModel):
     name: str
     address: str
     phone: str
+    modified_at: Optional[datetime] = None
     
 
 class CarBaseSchema(BaseModel):
@@ -20,6 +21,7 @@ class CarBaseSchema(BaseModel):
     km_travelled: Optional[float]
     modelname: str
     dealer_id: int 
+    modified_at: Optional[datetime] = None
 
     class Config:
         from_attributes = True

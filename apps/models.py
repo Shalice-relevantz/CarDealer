@@ -1,5 +1,6 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Float, DateTime
 from sqlalchemy.orm import relationship
+from datetime import datetime
 
 from apps.database import Base
 
@@ -11,6 +12,8 @@ class Dealer(Base):
     name = Column(String(100), nullable=False, index=True)
     address = Column(String(250), nullable=False)
     phone = Column(String(20), nullable=False)
+    created_at = Column(DateTime, nullable=False, default=datetime.now())
+    modified_at = Column(DateTime, nullable=True)
 
     cars = relationship("Car", backref="dealer")
 
@@ -31,5 +34,7 @@ class Car(Base):
     km_travelled = Column(Float, nullable=True)
     modelname = Column(String(100), nullable=False)
     dealer_id = Column(Integer,ForeignKey('dealer.id'),nullable=False)
+    created_at = Column(DateTime, nullable=False, default=datetime.now())
+    modified_at = Column(DateTime, nullable=True)
 
     dealers = relationship("Dealer", backref="car")

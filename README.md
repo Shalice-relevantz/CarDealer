@@ -1,5 +1,3 @@
-# Simple FastAPI Py
-
 ## FastAPI Project to manage car dealers
 
 This is a simple REST API built with Python and FastAPI and SQLAlchemy for CRUD operations (Create, Read, Update, Delete) for car dealers.
@@ -113,6 +111,8 @@ Response:
 
 #### In the same way we can trigger all the API endpoints from docs.
 
+![](screenshot.png)
+
 #Note:
 ```commandline
     # Why FastApi?
@@ -120,9 +120,8 @@ Response:
         FastAPI is faster due to its asynchronous code and type annotations.
         FastAPI has automatic data validation and documentation.
 
-        We can compare multiple frameworks available and can be picked up as based on the requirments.
-
-        I have added the default validation usinf pydantic and sqlalchemy, also done a custom validation for dealer while create cars.
+        We can compare multiple frameworks that are available and select the most suitable one based on the requirements.
+        I have implemented default validation using Pydantic and SQLAlchemy, as well as custom validation for the 'dealer' field when creating cars.
 
     
     # Below things i planned to add but due to time, i suppose to limit with basic needs. 
@@ -130,6 +129,8 @@ Response:
          2) We can generate a token based authentication for the delaers signup/login
          3) Implement async/await functionality on project demands.         
 ```
+
+
 
 
 
